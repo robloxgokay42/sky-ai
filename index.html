@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyAI - Yaratıcı Asistanınız</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SkyAI</h1>
+            <p>Anında, kesin ve yaratıcı çözümler için buradayım.</p>
+        </header>
+
+        <div class="settings">
+            <label>Araştırma Modu:</label>
+            <select id="search-mode">
+                <option value="none">Sadece Anında Cevap</option>
+                <option value="search" selected>Web'de Ara (Derinleşebilir)</option>
+                <option value="long">Daha Uzun Düşünme</option>
+            </select>
+        </div>
+
+        <div class="chat-area">
+            <div id="response-output" class="response-box">
+                <p class="welcome-message">Merhaba! Size nasıl yardımcı olabilirim?</p>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <textarea id="user-prompt" placeholder="Sorunuzu buraya yazın..." rows="3"></textarea>
+            <button id="send-button">Gönder</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

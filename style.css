@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #007bff; /* Mavi */
+    --secondary-color: #f8f9fa; /* Açık Gri */
+    --text-color: #333;
+    --border-radius: 8px;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    background-color: #e9ecef;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Ayarlar (Mod Seçimi) */
+.settings {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+}
+
+.settings label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#search-mode {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Sohbet Alanı */
+.chat-area {
+    min-height: 350px;
+    max-height: 50vh; /* Mobil cihazlarda daha iyi görünüm */
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+}
+
+.welcome-message {
+    color: var(--primary-color);
+    font-style: italic;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Cevap Kutusu Stil Ayarları */
+.response-box p {
+    line-height: 1.7;
+    margin: 0 0 1em 0;
+}
+
+/* Giriş Alanı */
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#user-prompt {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    resize: none;
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+
+#send-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#send-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Markdown Stil Uygulamaları (Yapay Zeka Cevapları İçin) */
+.response-box b, .response-box strong {
+    font-weight: 700;
+}
+.response-box i, .response-box em {
+    font-style: italic;
+}
+/* Altı Çizili için: Markdown'da __altıçizili__ yaygın değildir, ancak biz CSS ile bir sınıf ekleyeceğiz */
+.response-box u {
+    text-decoration: underline;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px 15px;
+    }
+    .input-area {
+        flex-direction: column;
+    }
+    #send-button {
+        width: 100%;
+        padding: 12px;
+    }
+    .chat-area {
+        max-height: 55vh;
+    }
+}
